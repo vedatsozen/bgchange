@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND IS CHANGING AT EVERY 5 SECONDS WITH SET INTERVAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav id="navid">
+
+    <img class="logo" src="images/logo.png">
+
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About Me</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+      
+    </ul>
+
+</nav>
+
+<header id="header">
+
+    <h1 class="header">Neque porro quisqam est qui dolorem ipsum quia dolor sit amet</h1>
+    <p class="header">There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain</p>
+    <button class="header">Learn More</button>
+</header>
+
+<section class="birinci">
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+</section>
+
+
+
+</body>
+
+<script>
+
+const photos = ["images/bir.jpg","images/iki.jpg","images/uc.jpg"];
+
+let currentIndex = 0 ;
+
+function displayNextPhoto() {
+
+
+document.getElementById("header").style.backgroundImage = `url(${photos[currentIndex]})`;
+
+currentIndex = (currentIndex + 1) % photos.length;
+
+}
+
+displayNextPhoto();
+
+setInterval(displayNextPhoto,3000);
+
+</script>
+</html>
